@@ -1,0 +1,124 @@
+\documentclass[12pts,twoside,a4paper]{report}
+\usepackage{hyperref}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage[utf8]{inputenc}
+%\usepackage{graphicx}
+\usepackage{setspace}
+\usepackage{multicol}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{epstopdf}
+\usepackage{pdfpages}
+\usepackage{url} 
+\usepackage{custom}
+\usepackage{float}
+\usepackage{pdfpages}
+\usepackage{booktabs}
+\usepackage{adjustbox}
+\usepackage{multirow}
+\usepackage{balance}
+\usepackage{grffile}
+\usepackage{pdfpages}
+
+\AtBeginDocument{\def\chapterautorefname{Chapter}}%
+\usepackage{lipsum}
+\usepackage{tabu} 
+%\usepackage[linesnumbered,ruled,vlined]{algorithm2e}
+\usepackage{enumitem}
+\newcommand\mycommfont[1]{\footnotesize\ttfamily\textcolor{blue}{#1}}
+%\SetCommentSty{mycommfont}
+%\SetKwComment{Comment}{$\triangleright$\ }{}
+\raggedbottom
+
+
+%\SetKwInput{KwData}{The data}
+
+
+\usepackage{kantlipsum}
+\usepackage{fontspec}
+\usepackage{polyglossia}
+\setdefaultlanguage{english}
+
+
+
+
+
+%\usepackage{geometry}
+\usepackage{marginnote}
+\usepackage[section]{placeins}
+
+%\onehalfspacing
+\doublespacing
+
+%\graphicspath{{images/}}
+\usepackage[a4paper, top=25mm, bottom=25mm, right=25mm, left=35mm]{geometry}
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[C]{\rightmark}
+\fancyfoot[c]{\thepage}
+
+% \LinesNumbered
+\newcommand{\vect}[2]{\ensuremath{\left[ \begin{smallmatrix}#1\\#2\end{smallmatrix} \right]}}
+
+\newcommand{\authorname}{Jatin Dev}
+\newcommand{\supname}{Dr.Mainak Chaudhuri}
+\newcommand{\authorrollno}{18111027}
+\newcommand{\degreename}{Master of Technology}
+\newcommand{\deptname}{Department of Computer Science and Engineering}
+%\newcommand{\thesistitle}{Identification and Application of critical IP’s in Prefetching}
+\newcommand{\thesistitle}{Identifying and Prefetching Performance-critical Loads}
+\newcommand{\datesubmission}{Aug, 2020}
+
+
+\title{\thesistitle}
+\author{\authorname}
+\date{\today}
+
+%\showthe\parindent
+%\showthe\parskip
+\def \defparskip {0.0pt plus 1.0pt}
+\def \defparindent {15pt}
+%\show\defparindent 
+%\show\defparskip
+
+\setcounter{tocdepth}{2}
+%\renewcommand{\floatpagefraction}{.95}%
+\renewcommand{\topfraction}{.95}%
+\renewcommand{\textfraction}{.05}%
+
+%\includeonly{chapters/results}
+
+\begin{document} 
+
+	\pagenumbering{roman}
+	
+	\include{chapters/titlepage}
+	\includepdf{chapters/certificate.pdf}
+	\includepdf{chapters/declaration.pdf}
+
+	\include{chapters/abstract}
+ 	\include{chapters/acknowledgements}
+	\tableofcontents
+	\include{chapters/listoffigures}
+     
+	%%%%%%%%%%%%%%%%%%%%%%%
+	\pagenumbering{arabic}
+	\include {chapters/intro}
+	\include{chapters/Relatedwork}
+	\include{chapters/ROB}
+	\include{chapters/Techniques}
+    \include{chapters/Results}
+    \include{chapters/ConclusionAndfuturework}
+ 	
+	%%%%%%%%%%%%%%%%%%%%%%%
+	\singlespacing
+    \bibliographystyle{plain}
+	%\bibliographystyle{unsrt}
+	\include{chapters/ref}
+\end{document}
