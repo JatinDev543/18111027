@@ -1,2 +1,1 @@
-# IITK-Thesis-Template-Sample
-Sample templete for M.Tech thesis IITK
+# IITK-Thesis-18111027
